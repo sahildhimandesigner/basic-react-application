@@ -12,7 +12,7 @@ export default function Navbar(props) {
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Home</a>
+                <a className="nav-link active" aria-current="page" href="#">{props.aboutText}</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">Features</a>
@@ -44,4 +44,9 @@ export default function Navbar(props) {
 Navbar.propTypes = {
     title: PropTypes.string,
     aboutText: PropTypes.string
+}
+
+Navbar.defaultProps = {
+    title: 'Set the title',
+    aboutText: 'Set the about text'
 }
