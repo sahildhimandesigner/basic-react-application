@@ -19,6 +19,10 @@ export default function TextForm(props) {
         setText(newText);
     }
 
+    const handleClearText = () => {
+        setText('')
+    }
+
   return (
     <>
         <div>        
@@ -28,6 +32,7 @@ export default function TextForm(props) {
             </div>
             <button onClick={handleUpClick} className="btn btn-primary">Convert to Uppercase</button>
             <button onClick={handleLowClick} className="btn btn-primary mx-2">Convert to lowercase</button>
+            <button onClick={handleClearText} className="btn btn-primary mx-2">Clear</button>
         </div>
         <div className='container my-4'>
             <h5> {text.split(" ").length} words and {text.length}: characters</h5>
