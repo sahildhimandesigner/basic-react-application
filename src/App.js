@@ -5,10 +5,8 @@ import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import {
   BrowserRouter as Router,
-  Switch,
   Routes,
   Route,
-  Link
 } from 'react-router-dom'
 
 function App() {
