@@ -5,24 +5,23 @@ export default function TextForm(props) {
     const [text, setText] = useState('set text here');
 
     const handleOnChange = (event) => {
-        console.log('on change');
         setText(event.target.value);
     }
 
     const handleUpClick = () => {
         let newText = text.toUpperCase();
         setText(newText);
-        props.showAlert("Converted to uppercase!", "success")
+        props.showAlert("Converted to uppercase!", "success");
     }
 
     const handleLowClick = () => {
         let newText = text.toLowerCase();
         setText(newText);
-        props.showAlert("Converted to lowercase!", "success")
+        props.showAlert("Converted to lowercase!", "success");
     }
 
     const handleClearText = () => {
-        setText('')
+        setText('');
     }
 
   return (
@@ -37,7 +36,7 @@ export default function TextForm(props) {
             <button onClick={handleClearText} className="btn btn-primary mx-2">Clear</button>
         </div>
         <div className='container my-4'>
-            <h5> {text.split(" ").length} words and {text.length}: characters</h5>
+            <h5>{text.split(" ").length - 1} words and {text.length}: characters</h5>
             <h5>Reading Time: {0.008 * text.split(" ").length}</h5>
         </div>
         <h5>Preview:</h5>
